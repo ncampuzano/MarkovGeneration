@@ -1,3 +1,13 @@
+function doTheThing(jsonResponse){
+    var allTheText = '';
+    for (var i = 0; i < jsonResponse.length; i++){
+        allTheText.concat(jsonResponse[i].full_text);
+    }
+    rule = makerule(allTheText, 3)
+    string = makestring(rule, 10)
+    alert(string)
+}
+
 function cleandata(data){
     var res = data.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
     return res;
