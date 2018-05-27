@@ -18,7 +18,6 @@ function cleandata(data){
 function makerule(data, context){
     var rule = {};
     var words = data.split(" ");
-    index = context
 
     for (var i = 0; i < words.length; i++) {
         var key = '';
@@ -32,12 +31,14 @@ function makerule(data, context){
             rule[key] = [words[j]];
         }
     }
-    return rule
+    return rule;
 }
 
 function makestring(rule, length){
-    var r = Math.floor((Math.random() * (rule.length - 1)));
-    var oldwords = rule.keys()[r].split(" ");
+    
+    var oldwords = Object.keys(rule);
+    var r = Math.floor((Math.random() * (oldwords.length - 1)));
+    oldwords = oldwords[r].split(" ");
 
     var string = '';
     for (var j = 0;j < oldwords.length; j++) {
