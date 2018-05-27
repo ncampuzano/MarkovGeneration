@@ -5,9 +5,9 @@ function doTheThing(jsonResponse){
         allTheText = allTheText.concat(cleandata(jsonResponse[i].full_text));
     }
     console.log(allTheText);
-    rule = makerule(allTheText, 3);
-    string = makestring(rule, 10);
-    alert(string);
+    var rule = makerule(allTheText, 20);
+    var string = makestring(rule, 10);
+    return string;
 }
 
 function cleandata(data){
