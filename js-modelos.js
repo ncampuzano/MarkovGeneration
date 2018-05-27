@@ -1,8 +1,8 @@
 function doTheThing(jsonResponse){
     var allTheText = '';
     for (var i = 0; i < jsonResponse.length; i++){
-        allTheText = allTheText.concat(' ');
         allTheText = allTheText.concat(cleandata(jsonResponse[i].full_text));
+        allTheText = allTheText.concat(' ');
     }
     console.log(allTheText);
     var rule = makerule(allTheText, 20);
