@@ -44,7 +44,6 @@ function makestring(rule, length){
     var r = Math.floor((Math.random() * (oldwords.length - 1)));
     oldwords = oldwords[r].split(" ");
     oldwords.pop();
-    console.log(oldwords);
     var string = '';
     for (var j = 0;j < oldwords.length; j++) {
         string = string.concat(' ');
@@ -52,27 +51,23 @@ function makestring(rule, length){
     }
 
     for (var i = 0; i < length; i++) {
-        console.log(oldwords);
         var key = '';
         for (var j = 0;j < oldwords.length; j++) {            
             key = key.concat(oldwords[j]);
             key = key.concat(' ');
         }
-        console.log("ESTA ES LA KEY "+key);
         if (rule.hasOwnProperty(key)){
             var rulenext = rule[key];
+            console.log(rulenext.length + " posibles siguientes palabras");
             var r = Math.floor((Math.random() * (rulenext.length - 1)));
             newword = rulenext[r];
             string = string.concat(newword);
             string = string.concat(' '); 
-            console.log("ESTA ES LA nueva palabra "+newword);
             for (var j = 0;j < oldwords.length; j++) {
                 oldwords[j] = oldwords[(j + 1) % oldwords.length];
             }
             oldwords[oldwords.length-1] = newword;
-            console.log("ESTA ES LA nueva key de palabras  " + oldwords);
         }else{
-            console.log("No hay regla con key " + key);
             return string;
         }
     }
