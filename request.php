@@ -18,7 +18,7 @@ $response = $twitter->setGetfield($getfield)
         ->performRequest();
 $tweets = json_decode($response);
 $result = json_decode($response, true);
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 20; $i++) {
     $twitter = new TwitterAPIExchange($settings);
     $id = $tweets[count($tweets)-1]->id_str;
     $getfield = '?screen_name=' . $_GET['username'] . '&count=200&trim_user=1&exclude_replies=1&include_rts=0&tweet_mode=extended&max_id='.$id;
