@@ -63,7 +63,7 @@ function makestring(rule, length){
             newword = rulenext[r];
             string = string.concat(newword);
             string = string.concat(' '); 
-            
+            console.log("ESTA ES LA nueva palabra "+newword);
             for (var j = 0;j < oldwords.length; j++) {
                 oldwords[j] = oldwords[(j + 1) % oldwords.length];
             }
