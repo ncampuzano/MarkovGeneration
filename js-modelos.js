@@ -52,7 +52,7 @@ function makestring(rule, length){
 
     for (var i = 0; i < length; i++) {
         var key = '';
-        for (var j = 1;j < oldwords.length; j++) {            
+        for (var j = 1;j < oldwords.length - 1; j++) {            
             key = key.concat(oldwords[j]);
             key = key.concat(' ');
         }
