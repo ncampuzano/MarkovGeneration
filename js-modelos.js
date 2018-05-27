@@ -3,9 +3,10 @@ function doTheThing(jsonResponse){
     for (var i = 0; i < jsonResponse.length; i++){
         allTheText.concat(jsonResponse[i].full_text);
     }
-    rule = makerule(allTheText, 3)
-    string = makestring(rule, 10)
-    alert(string)
+    console.log(allTheText);
+    rule = makerule(allTheText, 3);
+    string = makestring(rule, 10);
+    alert(string);
 }
 
 function cleandata(data){
