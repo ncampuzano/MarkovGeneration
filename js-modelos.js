@@ -6,7 +6,7 @@ function doTheThing(jsonResponse){
     }
     //console.log("TEXTO LIMPIO");
     //console.log(allTheText);
-    var rule = makerule(allTheText, 3);
+    var rule = makerule(allTheText, 2);
     var string = makestring(rule, 20);
     return string;
 }
