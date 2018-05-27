@@ -113,7 +113,7 @@
             type: 'GET',
             dataType: 'json',
             success: function (response) {
-              console.log(JSON.parse(response));
+              //console.log(JSON.parse(response));
               document.getElementById("p1").innerHTML = doTheThing(JSON.parse(response));
             },
             error: function(error){
