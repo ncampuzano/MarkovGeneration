@@ -114,8 +114,7 @@
             dataType: 'json',
             success: function (response) {
               //console.log(response);
-              //console.log(JSON.parse(response));
-              document.getElementById("p1").innerHTML = doTheThing(JSON.parse(response));
+              document.getElementById("p1").innerHTML = doTheThing(response);
             },
             error: function(error){
               console.log(error);

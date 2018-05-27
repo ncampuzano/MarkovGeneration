@@ -13,18 +13,20 @@ $getfield = '?screen_name=' . $_GET['username'] . '&count=200&trim_user=1&exclud
 $requestMethod = 'GET';
 
 $twitter = new TwitterAPIExchange($settings);
-$tweets = json_decode($twitter->setGetfield($getfield)
+$response = $twitter->setGetfield($getfield)
         ->buildOauth($url, $requestMethod)
-        ->performRequest());
-$result = json_encode($tweets);
+        ->performRequest();
+$tweets = json_decode($response);
+$result = json_decode($response, true);
 for ($i = 0; $i < 1; $i++) {
     $twitter = new TwitterAPIExchange($settings);
-    $id = $tweets[count($tweets) - 1]->id_str;
+    $id = $tweets[count($tweets)-1]->id_str;
     $getfield = '?screen_name=' . $_GET['username'] . '&count=200&trim_user=1&exclude_replies=1&include_rts=0&tweet_mode=extended&max_id='.$id;
-    $tweets = json_decode($twitter->setGetfield($getfield)
+    $response = $twitter->setGetfield($getfield)
             ->buildOauth($url, $requestMethod)
-            ->performRequest());
-    $result = $result.''.json_encode($tweets);
+            ->performRequest();
+    $tweets = json_decode($response);
+    $result = array_merge($result, json_decode($response, true));
 }
-echo $result;
+echo json_encode($result);
 ?>
