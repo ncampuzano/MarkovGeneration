@@ -43,6 +43,7 @@ function makestring(rule, length){
     var oldwords = Object.keys(rule);
     var r = Math.floor((Math.random() * (oldwords.length - 1)));
     oldwords = oldwords[r].split(" ");
+    oldwords.pop();
     console.log(oldwords);
     var string = '';
     for (var j = 0;j < oldwords.length; j++) {
