@@ -113,7 +113,7 @@
             type: 'GET',
             dataType: 'json',
             success: function (response) {
-              alert(response[0]["created_at"]);
+              alert(response.created_at);
               console.log(response);
             },
             error: function(error){
