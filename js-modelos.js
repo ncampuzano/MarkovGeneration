@@ -54,7 +54,7 @@ function makestring(rule, length){
     for (var i = 0; i < length; i++) {
         console.log(oldwords);
         var key = '';
-        for (var j = 0;j < oldwords.length - 1; j++) {            
+        for (var j = 0;j < oldwords.length; j++) {            
             key = key.concat(oldwords[j]);
             key = key.concat(' ');
         }
