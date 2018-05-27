@@ -5,7 +5,7 @@ function doTheThing(jsonResponse){
         allTheText = allTheText.concat(' ');
     }
     console.log(allTheText);
-    var rule = makerule(allTheText, 20);
+    var rule = makerule(allTheText, 10);
     var string = makestring(rule, 10);
     return string;
 }
