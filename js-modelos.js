@@ -70,9 +70,9 @@ function makestring(rule, length){
                 oldwords[j] = oldwords[(j + 1) % oldwords.length];
             }
             oldwords[oldwords.length-1] = newword;
+            console.log("ESTA ES LA nueva key de palabras  " + oldwords);
         }else{
-            console.log("NO HAY REGLA");
-            console.log(key);
+            console.log("No hay regla con key " + key);
             return string;
         }
     }
