@@ -67,6 +67,6 @@ function makestring(rule, length){
         }else{
             return string;
         }
-        return string;
     }
+    return string;
 }
