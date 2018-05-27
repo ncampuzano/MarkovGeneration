@@ -13,6 +13,7 @@ function doTheThing(jsonResponse){
 function cleandata(data){
     var data = data.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
     data = data.replace("\n"," ");
+    data = data.replace(/[\n.,:;]+/g,'');
     return data;
 }
 
