@@ -56,6 +56,7 @@ function makestring(rule, length){
             key = key.concat(oldwords[j]);
             key = key.concat(' ');
         }
+        console.log("ESTA ES LA KEY "+key);
         if (rule.hasOwnProperty(key)){
             var rulenext = rule[key];
             var r = Math.floor((Math.random() * (rulenext.length - 1)));
