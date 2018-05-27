@@ -4,6 +4,7 @@ function doTheThing(jsonResponse){
         allTheText = allTheText.concat(cleandata(jsonResponse[i].full_text));
         allTheText = allTheText.concat(' ');
     }
+    console.log("TEXTO LIMPIO");
     console.log(allTheText);
     var rule = makerule(allTheText, 2);
     var string = makestring(rule, 20);
