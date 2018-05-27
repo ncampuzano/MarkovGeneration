@@ -68,9 +68,11 @@ function makestring(rule, length){
             }
             oldwords[oldwords.length-1] = newword;
         }else{
-            console.log("NO HAY REGLA")
+            console.log("NO HAY REGLA");
+            console.log(key);
             return string;
         }
     }
     return string;
 }
+
