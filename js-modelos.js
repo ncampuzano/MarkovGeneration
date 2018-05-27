@@ -61,8 +61,8 @@ function makestring(rule, length){
             console.log(rulenext.length + " posibles siguientes palabras");
             var r = Math.floor((Math.random() * (rulenext.length - 1)));
             newword = rulenext[r];
-            string = string.concat(newword);
             string = string.concat(' '); 
+            string = string.concat(newword);
             for (var j = 0;j < oldwords.length; j++) {
                 oldwords[j] = oldwords[(j + 1) % oldwords.length];
             }
