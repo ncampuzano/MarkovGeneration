@@ -113,7 +113,7 @@
             type: 'GET',
             dataType: 'json',
             success: function (response) {
-              alert("yay");
+              alert(JSON.parse(response).length);
               console.log(JSON.parse(response));
               doTheThing(JSON.parse(response));
             },
