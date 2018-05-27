@@ -12,6 +12,7 @@ function doTheThing(jsonResponse){
 
 function cleandata(data){
     var res = data.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '');
+    res = data.replace("\n"," ");
     return res;
 }
 
