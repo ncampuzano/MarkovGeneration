@@ -22,9 +22,9 @@ function makerule(data, context){
 
     for (var i = 0; i < words.length; i++) {
         var key = '';
-        for (var j = i; j <= i+context && j < words.length; j++) {
-          key = key.concat(' ');
+        for (var j = i; j <= i+context && j < words.length; j++) {      
           key = key.concat(words[j]);
+          key = key.concat(' ');
         }        
         if (rule.hasOwnProperty(key)) {
             rule[key].push(words[j]);
@@ -49,9 +49,9 @@ function makestring(rule, length){
 
     for (var i = 0; i < length; i++) {
         var key = '';
-        for (var j = 1;j < oldwords.length; j++) {
-            key = key.concat(' ');
+        for (var j = 1;j < oldwords.length; j++) {            
             key = key.concat(oldwords[j]);
+            key = key.concat(' ');
         }
         if (rule.hasOwnProperty(key)){
             var rulenext = rule[key];
