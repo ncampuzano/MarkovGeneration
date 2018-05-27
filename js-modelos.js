@@ -4,8 +4,8 @@ function doTheThing(jsonResponse){
         allTheText = allTheText.concat(cleandata(jsonResponse[i].full_text));
         allTheText = allTheText.concat(' ');
     }
-    console.log("TEXTO LIMPIO");
-    console.log(allTheText);
+    //console.log("TEXTO LIMPIO");
+    //console.log(allTheText);
     var rule = makerule(allTheText, 2);
     var string = makestring(rule, 20);
     return string;
@@ -68,6 +68,7 @@ function makestring(rule, length){
             }
             oldwords[oldwords.length-1] = newword;
         }else{
+            console.log("NO HAY REGLA")
             return string;
         }
     }
