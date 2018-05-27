@@ -46,8 +46,8 @@ function makestring(rule, length){
     oldwords.pop();
     var string = '';
     for (var j = 0;j < oldwords.length; j++) {
-        string = string.concat(' ');
         string = string.concat(oldwords[j]);
+        string = string.concat(' ');
     }
 
     for (var i = 0; i < length; i++) {
