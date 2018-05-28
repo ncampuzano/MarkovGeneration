@@ -7,7 +7,7 @@ function doTheThing(jsonResponse){
     //console.log("TEXTO LIMPIO");
     //console.log(allTheText);
     var rule = makerule(allTheText, 2);
-    var r = Math.floor((Math.random() * (10) - 5));
+    var r = 20+Math.floor((Math.random() * (10) - 5));
     var string = makestring(rule, r);
     return string;
 }
